@@ -11,7 +11,7 @@ export interface EscapePalette {
 export const palettes: EscapePalette[] = [
   {
     id: 'cobalt',
-    name: 'Кобальт и латунь',
+    name: 'Кобальт',
     stops: ['#0b1024', '#16236e', '#2e47f5', '#a9b6ff', '#f4e6bd', '#c58d3f', '#43202a'],
     inside: '#04060d',
     edge: '#fff6dc',

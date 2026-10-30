@@ -164,7 +164,7 @@ export default function MandelbrotArtwork({ reducedMotion }: ArtworkProps) {
           <Choice label="Места" value={location} onChange={goTo} options={locations.map((l) => ({ value: l.id, label: l.name }))} />
         </Group>
         <Group title="Цвет">
-          <Choice label="Палитра" value={paletteId} onChange={setPaletteId} options={darkPalettes.map((p) => ({ value: p.id, label: p.name }))} />
+          <Choice label="Палитра" value={paletteId} onChange={setPaletteId} columns={3} options={darkPalettes.map((p) => ({ value: p.id, label: p.name }))} />
           <Slider label="Ритм полос" value={density} min={0.3} max={3} step={0.05} onChange={setDensity} format={(v) => v.toFixed(2).replace('.', ',')} />
           <Slider
             label="Детализация"

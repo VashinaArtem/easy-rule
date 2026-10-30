@@ -78,7 +78,7 @@ interface ChoiceProps<T extends string> {
   value: T | null;
   options: { value: T; label: string }[];
   onChange: (v: T) => void;
-  columns?: 1 | 2;
+  columns?: 1 | 2 | 3;
 }
 
 export function Choice<T extends string>({ label, value, options, onChange, columns = 2 }: ChoiceProps<T>) {
