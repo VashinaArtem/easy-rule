@@ -109,7 +109,6 @@ export default function GrayScottArtwork({ reducedMotion }: ArtworkProps) {
       el.removeEventListener('pointercancel', up);
     };
     // toCell only reads refs.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [error]);
 
   useFrameLoop(canvasRef, () => {

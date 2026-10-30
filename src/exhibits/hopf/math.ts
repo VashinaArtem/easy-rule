@@ -89,4 +89,4 @@ export function fibreCurve(eta: number, lambda: number, segments: number, omega 
 }
 
 /** Points with |p| beyond this are dropped: they belong to curves running off to infinity. */
-export const CLIP_RADIUS = 9;
+export const CLIP_RADIUS = 6;

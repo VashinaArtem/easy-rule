@@ -66,8 +66,8 @@ function Room({ exhibit }: { exhibit: OpenExhibit }) {
             </Link>
           ) : (
             <Link to="/" className="room__step" rel="next">
-              <span className="room__step-dir">Конец маршрута</span>
-              <span className="room__step-title">В фойе</span>
+              <span className="room__step-dir">В фойе</span>
+              <span className="room__step-title">Конец маршрута</span>
             </Link>
           )}
         </nav>
@@ -86,6 +86,11 @@ function Room({ exhibit }: { exhibit: OpenExhibit }) {
   );
 }
 
+/** Turns `e^{2πit}` into e<sup>2πit</sup>; everything else is plain text. */
+function renderRule(rule: string): ReactNode[] {
+  return rule.split(/\^\{([^}]*)\}/).map((part, i) => (i % 2 ? <sup key={i}>{part}</sup> : part));
+}
+
 function WallLabel({ exhibit }: { exhibit: OpenExhibit }) {
   const [open, setOpen] = useState(() => window.matchMedia('(min-width: 1100px) and (min-height: 760px)').matches);
   return (
@@ -99,7 +104,7 @@ function WallLabel({ exhibit }: { exhibit: OpenExhibit }) {
           {exhibit.year ? `, ${exhibit.year}` : ''}
         </p>
         <p className="label__rule formula" translate="no">
-          {exhibit.rule}
+          {renderRule(exhibit.rule)}
         </p>
       </div>
       <div className="label__body" id="label-body" hidden={!open}>

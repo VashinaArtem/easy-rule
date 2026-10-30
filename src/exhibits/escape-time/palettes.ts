@@ -19,7 +19,7 @@ export const palettes: EscapePalette[] = [
   },
   {
     id: 'pearl',
-    name: 'Перламутр',
+    name: 'Жемчуг',
     stops: ['#0d0f20', '#3a2e69', '#9c78c4', '#f0c9d9', '#dff3ec', '#71b5b5', '#1a3949'],
     inside: '#06060c',
     edge: '#ffffff',

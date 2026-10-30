@@ -107,6 +107,8 @@ export function Hero() {
     readoutRef.current!.textContent = `c = ${formatComplex(c[0], c[1], 3)}`;
   });
 
+  const touch = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches;
+
   return (
     <header className="hero" ref={heroRef}>
       <canvas ref={canvasRef} className="hero__canvas" aria-hidden="true" data-failed={failed} />
@@ -119,7 +121,9 @@ export function Hero() {
           </span>
           <span className="hero__readout num" ref={readoutRef} aria-hidden="true" />
         </p>
-        <p className="hero__lead">Ведите курсором по странице: точка c сдвигается, и узор Жюлиа меняется вместе с ней.</p>
+        <p className="hero__lead">
+          {touch ? 'Проведите пальцем по странице' : 'Ведите курсором по странице'}: точка c сдвигается, и узор Жюлиа меняется вместе с ней.
+        </p>
         <Link to="/hall/infinity" className="hero__enter">
           Войти в первый зал
         </Link>

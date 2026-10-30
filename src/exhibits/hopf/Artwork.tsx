@@ -117,7 +117,7 @@ export default function HopfArtwork({ reducedMotion }: ArtworkProps) {
       renderer.setClearColor(new Color('#0b1024'), 1);
       const camera = new PerspectiveCamera(42, 1, 0.1, 100);
       camera.up.set(0, 0, 1);
-      camera.position.set(3.4, -4.6, 2.6);
+      camera.position.set(4.7, -6.3, 3.6);
       const sceneObj = new Scene();
       const pos = new Float32Array(MAX_FIBRES * SEG * 6);
       const col = new Float32Array(MAX_FIBRES * SEG * 6);
@@ -188,6 +188,7 @@ export default function HopfArtwork({ reducedMotion }: ArtworkProps) {
       s.renderer.setSize(w, h, false);
       s.camera.aspect = w / h;
       // On wide screens move the figure right, out from under the wall label.
+      s.camera.zoom = w / h < 1 ? Math.max(0.55, (w / h) * 1.15) : 1;
       if (w > 1000) s.camera.setViewOffset(w, h, -w * 0.07, 0, w, h);
       else s.camera.clearViewOffset();
       s.camera.updateProjectionMatrix();

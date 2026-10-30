@@ -25,7 +25,8 @@ const rootsCodec: Codec<C[]> = {
 const aCodec = numberCodec(0.2, 1.95, 3);
 const DEFAULT_ROOTS = rootsOfUnity(3, 1, Math.PI / 2);
 
-export default function NewtonArtwork(_props: ArtworkProps) {
+export default function NewtonArtwork({ reducedMotion }: ArtworkProps) {
+  void reducedMotion; // Newton has no continuous animation of its own.
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const handlesRef = useRef<HTMLDivElement>(null);
   const gl = useRef<{ gl: WebGL2RenderingContext; prog: Program; vao: WebGLVertexArrayObject; target: ScaledTarget } | null>(null);

@@ -579,7 +579,7 @@ html[data-theme='night'] body {
 
 /* ---------- Small screens: dock at the bottom ---------- */
 
-@media (max-width: 760px), (max-height: 560px) {
+@media (max-width: 900px), (max-height: 560px) {
   .room__hall,
   .room__step-title {
     display: none;
@@ -643,7 +643,7 @@ html[data-theme='night'] body {
   }
 }
 
-@media (max-height: 560px) and (min-width: 761px) {
+@media (max-height: 560px) and (min-width: 901px) {
   .label {
     width: min(22rem, 45vw);
     right: auto;
