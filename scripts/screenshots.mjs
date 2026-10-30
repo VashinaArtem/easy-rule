@@ -35,6 +35,8 @@ const allRoutes = {
   'modular-nephroid': '/work/modular?k=3&n=400',
   'modular-frac': '/work/modular?k=34.37&n=500',
   hopf: '/work/hopf',
+  'hopf-sphere': '/work/hopf?scene=sphere&points=60',
+  'hopf-sphere': '/work/hopf?scene=sphere&points=60',
   'not-found': '/no-such-room',
 };
 const viewports = {

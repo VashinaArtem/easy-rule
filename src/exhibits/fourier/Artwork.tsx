@@ -184,7 +184,7 @@ export default function FourierArtwork({ reducedMotion }: ArtworkProps) {
             max={Math.min(256, maxCount)}
             step={1}
             onChange={setCount}
-            hint="Берутся самые большие круги. Углы сходятся медленно: рядом с ними линия «звенит»."
+            hint="Берутся самые большие круги. Острые углы сходятся медленно: нужно много кругов."
           />
           <Slider label="Скорость" value={speed} min={0.25} max={4} step={0.05} onChange={setSpeed} format={(v) => `×${formatNumber(v, 2)}`} />
           <div className="actions">
