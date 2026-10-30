@@ -653,3 +653,64 @@ html[data-theme='night'] body {
     width: 18rem;
   }
 }
+
+.art-canvas--paint {
+  cursor: crosshair;
+}
+
+.fkmap {
+  position: relative;
+  aspect-ratio: 100 / 72;
+  border: 1px solid var(--night-rule);
+  background: rgba(233, 236, 243, 0.04);
+  cursor: crosshair;
+  touch-action: none;
+  margin-bottom: 0.3rem;
+}
+
+.fkmap svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fkmap__curve {
+  fill: none;
+  stroke: var(--light-soft);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.fkmap__preset {
+  fill: var(--light-soft);
+}
+
+.fkmap__point {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  border: 2px solid var(--light);
+  background: var(--cobalt);
+  box-shadow: 0 0 0 1px rgba(11, 16, 36, 0.8);
+  pointer-events: none;
+}
+
+.fkmap__axis {
+  position: absolute;
+  font-size: 0.72rem;
+  color: var(--light-soft);
+  pointer-events: none;
+}
+
+.fkmap__axis--x {
+  right: 6px;
+  bottom: 3px;
+}
+
+.fkmap__axis--y {
+  left: 6px;
+  top: 3px;
+}
