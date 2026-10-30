@@ -28,7 +28,12 @@ const allRoutes = {
   'gray-scott-atlas': '/work/gray-scott?atlas=1',
   'gray-scott-coral': '/work/gray-scott?F=0.0545&k=0.062',
   fourier: '/work/fourier',
+  'fourier-square': '/work/fourier?shape=square&n=9',
   modular: '/work/modular',
+  'modular-nephroid': '/work/modular?k=3&n=400',
+  'modular-frac': '/work/modular?k=34.37&n=500',
+  'modular-nephroid': '/work/modular?k=3&n=400',
+  'modular-frac': '/work/modular?k=34.37&n=500',
   hopf: '/work/hopf',
   'not-found': '/no-such-room',
 };

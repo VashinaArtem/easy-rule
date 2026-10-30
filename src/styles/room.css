@@ -714,3 +714,21 @@ html[data-theme='night'] body {
   left: 6px;
   top: 3px;
 }
+
+.art-canvas[data-mode='draw'] {
+  cursor: crosshair;
+}
+
+.art__hint {
+  position: absolute;
+  top: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background: rgba(11, 16, 36, 0.8);
+  border: 1px solid var(--night-rule);
+  font-family: var(--serif);
+  pointer-events: none;
+  max-width: calc(100vw - 2rem);
+  text-align: center;
+}
